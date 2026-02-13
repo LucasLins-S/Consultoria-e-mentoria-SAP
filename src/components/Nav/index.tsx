@@ -1,8 +1,14 @@
-export default function Nav() {
+interface NavProps {
+  firstLinkHighlighted?: boolean
+}
+
+export default function Nav({
+  firstLinkHighlighted
+}: NavProps) {
   return (
     <nav>
-      <ul className="flex gap-15">
-        <li>Inicio</li>
+      <ul className="flex gap-15 font-bold">
+        <li className={firstLinkHighlighted ? "text-[#0A6ED1] font-extrabold" : ""}>Inicio</li>
         <li>Serviços</li>
         <li>Sobre mim</li>
         <li>Portfolio</li>

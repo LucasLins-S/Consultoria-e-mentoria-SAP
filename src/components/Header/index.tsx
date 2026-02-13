@@ -1,3 +1,4 @@
+import Button from "../Button";
 import Nav from "../Nav";
 
 export default function Header() {
@@ -8,19 +9,20 @@ export default function Header() {
         px-20 py-15
       ">
         {/* Logo */}
-        <img src="/lucas-lins-logo-black.png" alt="Lucas Lins Logo"
+        <img src="/lucas-lins-logo-blue.png" alt="Lucas Lins Logo"
           className="
             h-10
           "
         />
 
         {/* Nav */}
-        <Nav />
+        <Nav firstLinkHighlighted/>
 
         {/* CTA */}
-        <button className="bg-blue-200 px-8 py-2 rounded-md cursor-pointer">
-          Contratar-me
-        </button>
+        <Button
+          className="bg-[#0A6ED1] rounded-md text-white font-extrabold"
+          text="Contratar-me"
+        />
       </div>
     </header>
   );

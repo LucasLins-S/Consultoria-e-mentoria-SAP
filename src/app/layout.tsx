@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        <link rel="icon" href="/lucas-lins-logo.png" type="image/svg+xml"></link>
+        <link rel="icon" href="/lucas-lins-logo-blue.png" type="image/svg+xml"></link>
       </head>
       <body className={`${lato.variable} ${geistMono.variable} antialiased font-sans`}>
         {children}
