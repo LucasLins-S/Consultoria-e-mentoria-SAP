@@ -1,5 +1,78 @@
 @import "tailwindcss";
 
 * {
-    font-family: "Lato", sans-serif;
+  font-family: "Lato", sans-serif;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes glow-border {
+  0%, 100% { box-shadow: 0 0 8px rgba(10,110,209,0.15), 0 4px 20px rgba(10,110,209,0.1); }
+  50% { box-shadow: 0 0 18px rgba(10,110,209,0.3), 0 4px 30px rgba(10,110,209,0.2); }
+}
+
+.cta-card {
+  animation: glow-border 3s ease-in-out infinite;
+}
+
+.cta-icon {
+  animation: float 3s ease-in-out infinite;
+}
+
+.cta-btn {
+  background: linear-gradient(90deg, #0A6ED1 0%, #1a82f0 40%, #0A6ED1 80%, #1a82f0 100%);
+  background-size: 200% auto;
+  cursor: pointer;
+  transition: background-position 0.4s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-btn:hover {
+  background-position: right center;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(10, 110, 209, 0.45);
+}
+
+.timeline-card {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.timeline-card:hover {
+  box-shadow: 0 6px 24px rgba(10, 110, 209, 0.15);
+  transform: translateY(-2px);
+}
+
+.timeline-icon-wrap {
+  transition: none;
+}
+
+.dot-connector-left::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 2px;
+  background: #0A6ED1;
+  opacity: 0.4;
+}
+
+.dot-connector-right::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 2px;
+  background: #0A6ED1;
+  opacity: 0.4;
 }
