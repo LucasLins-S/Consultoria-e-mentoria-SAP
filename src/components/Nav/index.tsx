@@ -5,18 +5,27 @@ interface NavProps {
 
 export default function Nav({
   firstLinkHighlighted,
-  className = "" // Valor padrão vazio
+  className = ""
 }: NavProps) {
   return (
     <nav>
-      {/* Adicionamos a prop className na ul.
-          Se não passar nada, usa o padrão. Se passar, adiciona ao padrão. */}
       <ul className={`flex font-bold ${className ? className : "gap-15"}`}>
         <li className={firstLinkHighlighted ? "text-[#0A6ED1] font-extrabold" : ""}>Inicio</li>
-        <li>Serviços</li>
-        <li>Sobre mim</li>
-        <li>Portfolio</li>
-        <li>Contato</li>
+
+        <a href="#portfolio">
+          <li>Portfólio</li>
+        </a>
+
+        <a href="#about">
+          <li>Sobre mim</li>
+        </a>
+
+        <a href="#journey">
+          <li>Minha Trajetória</li>
+        </a>
+        <a href="#contactForm">
+          <li>Contato</li>
+        </a>
       </ul>
     </nav>
   )

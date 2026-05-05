@@ -1,18 +1,35 @@
-export default function ServiceCard() {
+import { ReactNode } from "react";
+
+interface ServiceCardProps {
+  title: string;
+  description: string;
+  icon: ReactNode;
+}
+
+export default function ServiceCard({ title, description, icon }: ServiceCardProps) {
   return (
     <div className="
-      flex flex-col rounded-2xl bg-gray-400 w-3/10 h-52
-      justify-center items-center gap-8
+      flex flex-col p-8 rounded-2xl bg-white border border-gray-100
+      shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300
+      items-start text-left gap-4 w-full md:w-[31%]
     ">
-        <div>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
-          </svg>
-        </div>
+      <div className="p-3 rounded-lg bg-blue-50 text-blue-600">
+        {icon}
+      </div>
 
-        <p>
-          Lorem ipsum dolor sit amet . Imperdiet Lorem ipsum dolor sit amet consectetur
-        </p>
+      <h3 className="text-xl font-bold text-gray-800">
+        {title}
+      </h3>
+
+      <p className="text-gray-600 leading-relaxed">
+        {description}
+      </p>
+      
+      <div className="mt-auto pt-4">
+        <span className="text-sm font-semibold text-blue-600 cursor-pointer hover:underline">
+          Saiba mais →
+        </span>
+      </div>
     </div>
   );
 }
