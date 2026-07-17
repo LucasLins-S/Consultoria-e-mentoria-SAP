@@ -9,13 +9,13 @@ import Timeline from "@/components/Timeline";
 export default function Home() {
 	return (
 		<div className="bg-[#F5F6F7] w-full">
-			<Header/>
+			<Header />
 			<Hero />
 			<Services />
 			<About />
 			<Timeline />
 			<ContactForm />
-			<Footer	/>
+			<Footer />
 		</div>
 	);
 }
