@@ -1,0 +1,143 @@
+{
+  "header": {
+    "cta": "Contrátame"
+  },
+  "nav": {
+    "home": "Inicio",
+    "portfolio": "Portafolio",
+    "about": "Sobre mí",
+    "journey": "Trayectoria",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Consultor y Mentor SAP",
+    "greeting": "Hola, soy",
+    "cta": "Contrátame"
+  },
+  "stats": {
+    "experience": "Años de Experiencia",
+    "projects": "Proyectos Completados",
+    "clients": "Clientes Satisfechos"
+  },
+  "about": {
+    "first-phrase": {
+      "part1": "Soy ",
+      "strong1": "Consultor SAP MM",
+      "part2": " con más de 5 años de experiencia en proyectos de implementación y mejoras en ",
+      "strong2": "SAP S/4HANA y Fiori",
+      "part3": ", trabajando en entornos de alta complejidad en los sectores retail y agronegocios. Mi trayectoria comenzó en operaciones, liderando logística y gestión de inventarios, lo que me dio una visión práctica del negocio antes incluso de entrar a la consultoría."
+    },
+    "second-phrase": {
+      "part1": "Hoy, combino esta base estratégica con dominio técnico en procesos de compras, inventario e impuestos, ",
+      "strong1": "Localización Brasil (J1BTAX/TAXBRA)",
+      "part2": ", datos maestros, Business Partner, Migration Cockpit, Workflow Flexible e integraciones críticas entre MM y las áreas financieras. Trabajo en proyectos Greenfield y Brownfield, además de AMS y soporte en entornos DEV, QAS y PRD."
+    },
+    "third-phrase": "Más que configurar sistemas, traduzco procesos en soluciones inteligentes. Mi misión es transformar el conocimiento técnico en claridad estratégica — tanto para empresas que buscan eficiencia como para profesionales que desean construir autoridad en el mercado SAP.",
+    "history": {
+      "title": "Un poco de mi historia",
+      "subtitle": {
+        "part1": "De usuario a experto en el sistema ",
+        "strong": "SAP"
+      }
+    }
+  },
+  "timeline": {
+    "title": "Un poco de mi historia",
+    "subtitle": "De usuario a experto en el sistema SAP",
+    "step1": {
+      "title": "La Escuela de la Vida Real",
+      "content": "Antes de configurar el sistema, viví el proceso. Como Líder de Operaciones en Dessol, gestioné inventarios, personas y el caos logístico diario. Fue aquí donde entendí que un ERP no es solo software; es el corazón de la empresa. Esta experiencia me dio la visión de negocio que les falta a muchos consultores puramente técnicos."
+    },
+    "step2": {
+      "title": "La Gran Transición",
+      "content": "Decidí que quería más. Migré a la consultoría (Bronxs Agro Systems) sumergiéndome de lleno en SAP HANA. Aprendí a transformar procesos de negocio en configuraciones de sistema. Dominé Datos Maestros y las complejidades fiscales de Brasil. Fue el inicio de la construcción de mi perfil técnico: resiliente y enfocado en soluciones."
+    },
+    "step3": {
+      "title": "Consultoría de Alto Rendimiento",
+      "content": "Pasando por AdopTI y Engine Brasil, perfeccioné mi caja de herramientas. Ya no se trataba solo de 'hacer que funcione', sino de optimizar. Lideré frentes de AMS, soporte crítico e implementaciones. Aquí, el dominio del Debugging, la Localización Brasil (TAXBRA) y la integración entre compras e impuestos se convirtieron en mi sello personal."
+    },
+    "step4": {
+      "title": "Las Grandes Ligas",
+      "content": "Trabajando como Senior en proyectos globales e implementaciones de S/4 HANA y Fiori desde cero (Greenfield). Hoy, utilizo herramientas avanzadas como Migration Cockpit y Workflow Flexible para entregar no solo un sistema, sino una transformación digital completa para los grandes actores del mercado."
+    },
+    "step5": {
+      "year": "Hoy",
+      "title": "El Futuro: Tu Viaje",
+      "subtitle": "Te enseñaré el camino",
+      "content": "Me tomó años descifrar el ecosistema SAP, cometiendo errores y acertando para llegar a donde estoy. Tú no necesitas tardar tanto. He recopilado mi experiencia de campo, desde soporte hasta implementación Senior, para guiarte. ¿Construimos juntos tu autoridad en el mercado SAP?"
+    }
+  },
+  "ctaCard": {
+    "button": "Acelerar Mi Carrera →"
+  },
+  "services": {
+    "title": "Servicios y Portafolio SAP",
+    "subtitle": "Soluciones estratégicas y mentoría especializada para transformar desafíos complejos en resultados de alto rendimiento.",
+    "card1": {
+      "title": "Mentoría S/4HANA",
+      "description": "Capacitación técnica y funcional para la transición e implementación de SAP S/4HANA con las mejores prácticas."
+    },
+    "card2": {
+      "title": "Consultoría BTP",
+      "description": "Desarrollo de extensiones e integraciones modernas utilizando SAP Business Technology Platform."
+    },
+    "card3": {
+      "title": "Arquitectura Clean Core",
+      "description": "Estrategias para mantener tu core SAP estandarizado, facilitando actualizaciones y reduciendo la deuda técnica."
+    },
+    "card4": {
+      "title": "Optimización de Procesos",
+      "description": "Análisis y mejora de flujos de negocio dentro del estándar SAP para máxima eficiencia operativa."
+    },
+    "card5": {
+      "title": "Análisis de Datos",
+      "description": "Transformación de datos brutos en insights estratégicos con SAP Analytics Cloud y Datasphere."
+    },
+    "card6": {
+      "title": "Capacitación In-company",
+      "description": "Programas personalizados para elevar el nivel de conocimiento de tu equipo interno de TI."
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "Hablemos de tu proyecto SAP",
+    "formHeader": {
+      "label": "FORMULARIO DE CONTACTO"
+    },
+    "fields": {
+      "name": {
+        "label": "Nombre Completo",
+        "placeholder": "Ej: Juan Pérez"
+      },
+      "company": {
+        "label": "Empresa",
+        "placeholder": "Ej: Empresa LTDA"
+      },
+      "email": {
+        "label": "Correo Electrónico",
+        "placeholder": "contacto@empresa.com"
+      },
+      "phone": {
+        "label": "Teléfono",
+        "placeholder": "+34 600 000 000"
+      }
+    },
+    "form": {
+      "message": {
+        "label": "Mensaje",
+        "placeholder": "Describe tu necesidad o proyecto SAP en detalle..."
+      },
+      "requiredField": "Campo obligatorio",
+      "privacy": "Tus datos están protegidos y no serán compartidos.",
+      "button": {
+        "send": "Enviar Mensaje",
+        "sending": "Enviando..."
+      }
+    },
+    "success": {
+      "title": "¡Mensaje enviado!",
+      "description": "Gracias por tu contacto. Revisaré tu mensaje y te responderé pronto con la mejor solución SAP para ti.",
+      "button": "Enviar otro mensaje"
+    }
+  }
+}

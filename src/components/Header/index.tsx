@@ -13,7 +13,7 @@ export default function Header() {
   };
 
   return (
-    <header className="relative">
+    <header className="relative dark:bg-zinc-950">
       <HeaderDesktop isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} onCTAClick={handleContactClick} />
 
       <HeaderMobile isMenuOpen={isMenuOpen} onCTAClick={handleContactClick} />

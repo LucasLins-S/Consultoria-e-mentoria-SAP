@@ -24,12 +24,6 @@ export default function ServiceCard({ title, description, icon }: ServiceCardPro
       <p className="text-gray-600 leading-relaxed">
         {description}
       </p>
-      
-      <div className="mt-auto pt-4">
-        <span className="text-sm font-semibold text-blue-600 cursor-pointer hover:underline">
-          Saiba mais →
-        </span>
-      </div>
     </div>
   );
 }

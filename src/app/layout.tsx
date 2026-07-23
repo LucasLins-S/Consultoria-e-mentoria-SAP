@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
-import { Lato, Geist_Mono } from "next/font/google"; // Importamos a Lato aqui
+import { Lato, Geist_Mono } from "next/font/google";
+import I18nProvider from '@/providers/I18nProvider';
+
+// @ts-expect-error Missing types
 import "./globals.css";
 
 const lato = Lato({
@@ -36,7 +39,7 @@ export default function RootLayout({
         <link rel="icon" href="/lucas-lins-logo-blue.png" type="image/svg+xml"></link>
       </head>
       <body className={`${lato.variable} ${geistMono.variable} antialiased font-sans`}>
-        {children}
+        <I18nProvider>{children}</I18nProvider>
       </body>
     </html>
   );

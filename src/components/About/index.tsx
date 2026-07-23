@@ -1,7 +1,13 @@
 "use client";
 
-import Button from "@/components/Button";
 import Image from "next/image";
+
+import Button from "@/components/Button";
+import SectionHeader from "@/components/SectionHeader";
+
+import { useTranslation } from "react-i18next";
+
+import { FaWhatsapp } from "react-icons/fa6";
 
 export default function About() {
 
@@ -9,19 +15,17 @@ export default function About() {
     window.open("https://wa.me/5511994997625", "_blank", "noopener,noreferrer");
   };
 
+  const { t } = useTranslation();
+
   return (
     <section id="about"
-      className="px-6 py-16 md:px-20 flex flex-col text-center space-y-4 mt-20
-      bg-purple-50
+      className="px-6 py-16 md:px-16 flex flex-col text-center space-y-4 mt-20
+      bg-white/90 dark:bg-zinc-950
     ">
-      <div>
-        <h2 className="text-4xl font-extrabold text-gray-900 tracking-tight">
-          Sobre mim
-        </h2>
-        <p className="text-gray-500 max-w-2xl mx-auto text-lg">
-          Consultoria e Mentoria Especializada SAP S/4HANA
-        </p>
-      </div>
+      <SectionHeader
+        title={t('services.title', { defaultValue: "About Me" })}
+        subtitle={t('services.subtitle', { defaultValue: "Specialized SAP S/4HANA Consulting and Mentoring." })}
+      />
 
       <div className="flex flex-1 flex-wrap min-h-screen">
         <div className="hidden md:flex flex-1 relative items-end">
@@ -40,20 +44,27 @@ export default function About() {
         <div className="flex-1 flex flex-col justify-center items-baseline space-y-6">
           <p className="text-justify flex flex-col gap-4 text-gray-700 leading-relaxed">
             <span>
-              Sou <strong className="text-gray-900">Consultor SAP MM</strong> com mais de 5 anos de experiência em projetos de implantação e melhorias no <strong>SAP S/4HANA e Fiori</strong>, atuando em ambientes de alta complexidade nos segmentos de varejo e agronegócio. Minha trajetória começou na operação, liderando logística e gestão de estoques, o que me deu uma visão prática de negócio antes mesmo de entrar para a consultoria.
+              {t('about.first-phrase.part1', 'I am an ')}
+              <strong className="text-gray-900">{t('about.first-phrase.strong1', 'SAP MM Consultant')}</strong>
+              {t('about.first-phrase.part2', ' with over 5 years of experience in implementation and improvement projects in ')}
+              <strong>{t('about.first-phrase.strong2', 'SAP S/4HANA and Fiori')}</strong>
+              {t('about.first-phrase.part3', ', working in highly complex environments in the retail and agribusiness sectors. My journey started in operations, leading logistics and inventory management, which gave me a practical business vision even before entering consulting.')}
             </span>
             <span>
-              Hoje, uno essa base estratégica com domínio técnico em processos de compras, estoque e fiscal, <strong>Localização Brasil (J1BTAX/TAXBRA)</strong>, dados mestres, Business Partner, Migration Cockpit, Workflow Flexível e integrações críticas entre MM e áreas financeiras. Atuo em projetos Greenfield e Brownfield, além de AMS e suporte em ambientes DEV, QAS e PRD.
+              {t('about.second-phrase.part1', 'Today, I combine this strategic foundation with technical mastery in purchasing, inventory and tax processes, ')}
+              <strong>{t('about.second-phrase.strong1', 'Brazil Localization (J1BTAX/TAXBRA)')}</strong>
+              {t('about.second-phrase.part2', ', master data, Business Partner, Migration Cockpit, Flexible Workflow and critical integrations between MM and financial areas. I work on Greenfield and Brownfield projects, as well as AMS and support in DEV, QAS and PRD environments.')}
             </span>
             <span>
-              Mais do que configurar sistema, eu traduzo processos em soluções inteligentes. Minha missão é transformar conhecimento técnico em clareza estratégica — tanto para empresas que buscam eficiência quanto para profissionais que desejam construir autoridade no mercado SAP.
+              {t('about.third-phrase', 'More than configuring systems, I translate processes into intelligent solutions. My mission is to transform technical knowledge into strategic clarity — both for companies seeking efficiency and for professionals who want to build authority in the SAP market.')}
             </span>
           </p>
 
           <Button
             className="rounded-md text-white font-extrabold bg-[#0A6ED1] px-4 py-1"
-            text="Contratar-me"
+            text={t('about.cta', { defaultValue: "Hire Me" })}
             onClick={handleContactClick}
+            icon={<FaWhatsapp size={24} color="#FFF" />}
           />
         </div>
       </div>

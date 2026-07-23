@@ -40,7 +40,7 @@ export default function LanguageSwitcher({ mobile = false }: LanguageSwitcherPro
     <div className="relative flex justify-center" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-1.5 text-sm font-bold text-zinc-800 hover:text-amber-600 transition-colors duration-200 focus:outline-none"
+        className="flex items-center gap-1.5 text-sm font-bold text-zinc-800 dark:text-zinc-200 hover:text-[#0A6ED1] dark:hover:text-[#3d9bff] transition-colors duration-200 focus:outline-none"
         aria-expanded={isOpen}
         aria-haspopup="true"
       >
@@ -84,7 +84,7 @@ export default function LanguageSwitcher({ mobile = false }: LanguageSwitcherPro
                 className={`
                   w-full text-left px-4 py-2.5 text-sm transition-colors duration-150
                   ${isActive
-                    ? "bg-zinc-50 dark:bg-zinc-800 text-amber-600 font-bold"
+                    ? "bg-zinc-50 dark:bg-zinc-800 text-[#0A6ED1] dark:text-[#3d9bff] font-bold"
                     : "text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 hover:text-zinc-900 dark:hover:text-zinc-100 font-medium"}
                 `}
               >

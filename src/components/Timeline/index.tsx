@@ -1,58 +1,76 @@
 'use client';
 
-import { FaBriefcase, FaRocket, FaTools, FaStar, FaHandshake } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
-import TimelineHeader from '@/components/TimelineHeader';
+import SectionHeader from '@/components/SectionHeader';
 import CtaCard from '@/components/CtaCard';
 import TimeLineCardLeft from '@/components/TimeLineCard/Left';
 import TimeLineCardRight from '@/components/TimeLineCard/Right';
 
+import {
+  FaBriefcase,
+  FaRocket,
+  FaTools,
+  FaStar,
+  FaHandshake
+} from 'react-icons/fa';
+
 export default function Timeline() {
+  const { t } = useTranslation();
   const steps = [
     {
       id: 1,
-      title: "A Escola da Vida Real",
+      title: t('timeline.step1.title', 'The Real Life School'),
       year: "2017-2020",
       icon: FaBriefcase,
-      content: "Antes de configurar o sistema, eu vivi o processo. Como Líder de Operações na Dessol, gerenciei estoques, pessoas e o caos do dia a dia logístico. Foi aqui que entendi que um ERP não é apenas software; é o coração da empresa. Essa vivência me deu a visão de negócio que falta em muitos consultores puramente técnicos."
+      content: t('timeline.step1.content', 'Before configuring the system, I lived the process. As Operations Leader at Dessol, I managed inventory, people, and the chaos of daily logistics. It was here that I understood an ERP is not just software; it’s the heart of the company. This experience gave me the business vision that many purely technical consultants lack.')
     },
     {
       id: 2,
-      title: "A Grande Transição",
+      title: t('timeline.step2.title', 'The Great Transition'),
       year: "2020-2022",
       icon: FaRocket,
-      content: "Decidi que queria mais. Migrei para a consultoria (Bronxs Agro Systems) mergulhando de cabeça no SAP HANA. Aprendi a transformar processos de negócio em configurações de sistema. Dominei Dados Mestres e as complexidades fiscais do Brasil. Foi o início da construção do meu perfil técnico: resiliente e focado em solução."
+      content: t('timeline.step2.content', 'I decided I wanted more. I migrated to consulting (Bronxs Agro Systems) diving headfirst into SAP HANA. I learned to transform business processes into system configurations. I mastered Master Data and the tax complexities of Brazil. It was the beginning of building my technical profile: resilient and solution-focused.')
     },
     {
       id: 3,
-      title: "Consultoria de Alta Performance",
+      title: t('timeline.step3.title', 'High Performance Consulting'),
       year: "2022-2025",
       icon: FaTools,
-      content: "Passando pela AdopTI e Engine Brasil, refinei minha caixa de ferramentas. Não era mais apenas sobre 'fazer funcionar', mas sobre otimizar. Liderei frentes de AMS, suporte crítico e implementações. Aqui, o domínio do Debugging, da Localização Brasil (TAXBRA) e a integração entre compras e fiscal se tornaram minha assinatura."
+      content: t('timeline.step3.content', 'Passing through AdopTI and Engine Brasil, I refined my toolbox. It was no longer just about "making it work", but optimizing it. I led AMS fronts, critical support, and implementations. Here, mastering Debugging, Brazil Localization (TAXBRA), and the integration between purchasing and tax became my signature.')
     },
     {
       id: 4,
-      title: "O Jogo de Gente Grande",
+      title: t('timeline.step4.title', 'The Big Leagues'),
       year: "2025-2026",
       icon: FaStar,
-      content: "Atuando como Sênior em projetos globais e implementações S/4 HANA e Fiori do zero (Greenfield). Hoje, utilizo ferramentas avançadas como Migration Cockpit e Workflow Flexível para entregar não apenas um sistema, mas uma transformação digital completa para grandes players do mercado."
+      content: t('timeline.step4.content', 'Working as a Senior on global projects and S/4 HANA and Fiori implementations from scratch (Greenfield). Today, I use advanced tools like Migration Cockpit and Flexible Workflow to deliver not just a system, but a complete digital transformation for major market players.')
     },
     {
       id: 5,
-      year: "Hoje",
+      year: t('timeline.step5.year', 'Today'),
       icon: FaHandshake,
       isCTA: true,
-      title: "O Futuro: A Sua Jornada",
-      subtitle: "Vou te ensinar o caminho das pedras",
-      content: "Eu levei anos decifrando o ecossistema SAP, errando e acertando para chegar onde estou. Você não precisa demorar tanto. Compilei minha experiência de campo, do suporte à implementação Sênior, para guiar você. Vamos construir a sua autoridade no mercado SAP juntos?"
+      title: t('timeline.step5.title', 'The Future: Your Journey'),
+      subtitle: t('timeline.step5.subtitle', 'I will show you the ropes'),
+      content: t('timeline.step5.content', 'It took me years to decipher the SAP ecosystem, making mistakes and getting it right to get where I am. You don’t need to take that long. I’ve compiled my field experience, from support to Senior implementation, to guide you. Shall we build your authority in the SAP market together?')
     },
   ];
 
   return (
-    <section id="journey"
-      className="px-4 py-16 md:px-20 md:py-20 min-h-screen">
-      <div className="relative">
-        <div className="absolute left-6 md:left-1/2 top-48 md:top-0 -translate-x-1/2 w-px h-full bg-[#0A6ED1] opacity-40" />
+    <section id="journey" className="px-4 py-16 md:px-16 md:py-20 min-h-screen">
+
+      <div className="flex flex-col items-center justify-center w-full mb-16 text-center">
+        <SectionHeader
+          title={t('timeline.title', 'A bit of my story')}
+          subtitle={t('timeline.subtitle', 'From user to expert in the SAP system')}
+        />
+      </div>
+
+      <div className="relative w-full">
+
+        <div className="absolute left-6 md:left-1/2 top-0 -translate-x-1/2 w-px h-full bg-[#0A6ED1] opacity-40" />
+
         {[15, 30, 45, 60, 75].map((pct) => (
           <div
             key={pct}
@@ -62,8 +80,6 @@ export default function Timeline() {
         ))}
 
         <div className="flex flex-col gap-8 md:gap-16">
-          <TimelineHeader />
-
           {steps.map((step, index) => {
             const isLeft = index % 2 === 0;
             const Icon = step.icon;

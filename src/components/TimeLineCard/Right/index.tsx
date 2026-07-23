@@ -8,7 +8,7 @@ interface TimeLineCardRightProps {
 
 export default function TimeLineCardRight({ step }: TimeLineCardRightProps) {
   return (
-    <div className="timeline-card border-2 border-[#0A6ED1] p-4 rounded-sm shadow-lg relative dot-connector-right">
+    <div className="timeline-card border-2 border-[#0A6ED1] p-4 rounded-sm shadow-lg relative dot-connector-right dark:bg-zinc-950">
       <span className="absolute -top-3 left-3 bg-[#0A6ED1] text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
         {step.year}
       </span>
